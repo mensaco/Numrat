@@ -23,32 +23,42 @@
     </style>
 </head>
 
-<body class="relative">
-
-    <div class="main p-3" x-data="App()">
+<body >
+    <div class="relative md:w-5/6 lg:w-3/4 xl:w-2/3 mx-auto">
+            <div class="main p-3" x-data="App()">
 
         <div class="grid gap-3">
-            <div class="text-3xl">Emrat e numrave në gjuhën shqipe</div>
-            <i class="mb-3 text-gray-500">Llogarit emrin e një numri të dhënë natyror nga intervali <br>0 - 999999999999999999999999999999999999</i>
-            <label class="">Jep një numër natyror:</label>
-
             <div>
-                <input type="text"
-                 class="w-full md:w-[23rem] p-1 text-lg border border-gray-300 text-gray-700 bg-gray-50 min-w-60" x-model="inputNumber" size="36"
-                    maxlength="36" 
-                    pattern="[0-9]{0,36}"
-                    placeholder="shtype numrin tënd këtu" 
-                    :class="inputNumber.match(/\D/g) ? 'text-red-700':''">
-
-                    <div>
-                        <i class="text-red-700 font-semibold" x-show="inputNumber.match(/\D/g)">Shenjat jonumërore nuk mund të përpunohen</i>
-                        &nbsp;</div>
+                
+                <div class="text-2xl my-3">Emrat e numrave në gjuhën shqipe</div>
+                <i class="mb-3 text-gray-500">Llogarit emrin e një numri të dhënë natyror nga intervali <br>0 - 999999999999999999999999999999999999</i>
             </div>
+            <div>&nbsp;</div>
+            <div class="">
+                <label class="">Jep një numër natyror:</label>
+                <div class="my-3">
+                    <input type="text"
+                     class="w-full p-1 font-semibold border border-gray-300 text-gray-700 bg-gray-50 min-w-60" 
+                     x-model="inputNumber" size="36"
+                        maxlength="36" 
+                        pattern="[0-9]{0,36}"
+                        placeholder="shtype numrin tënd këtu" 
+                        :class="inputNumber.match(/\D/g) ? 'text-red-700':''">
+    
+                        <div>
+                            <i class="text-red-700 font-semibold" x-show="inputNumber.match(/\D/g)">Shenjat jonumërore nuk mund të përpunohen</i>
+                            &nbsp;</div>
+                </div>
+            </div>
+            
 
 
             <div>&nbsp;</div>
-            <label for="">Emri i numrit të dhënë:</label>
-            <div :style="`${ifs()}`" x-text="nr(inputNumber)" class="p-3 bg-gray-100 rounded-lg border border-gray-500"></div>
+            <div>
+                <label for="">Emri i numrit të dhënë:</label>
+                <div x-text="nr(inputNumber)" class="p-3 bg-green-100 rounded-lg border border-green-500 text-lg my-3 text-green-800 font-semibold"></div>
+
+            </div>
         </div>
 
 
@@ -58,8 +68,11 @@
     </div>
 
     <div class="p-3 text-justify text-gray-500 bottom-0 left-0 right-0 relative border rounded-lg mx-3 my-3 border-blue-500"> 
-        <div class="border-2 border-blue-500 px-2 rounded-xl text-blue-500 text-sm font-semibold inline-block absolute top-2 left-2">i</div>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Ky program është ende në fazën beta, prandaj me gjithë kujdesin gjatë programimit, nuk mund të përjashtojmë mundësinë e ndonjë lëshimi. </div>
+        <div class="border-2 border-blue-500 px-2 rounded-xl text-blue-500 text-sm font-semibold inline-block">i</div>
+    Ky program është ende në fazën beta. Me gjithë kujdesin gjatë programimit nuk mund të përjashtojmë mundësinë e ndonjë lëshimi. </div>
+
+    </div>
+
 
 
     <!-- Alpine Plugins -->
