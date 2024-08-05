@@ -48,7 +48,7 @@
 
             <div>&nbsp;</div>
             <label for="">Emri i numrit të dhënë:</label>
-            <div :style="`${ifs()}`" x-text="nr(inputNumber)" class="p-3 bg-gray-100 rounded-lg"></div>
+            <div :style="`${ifs()}`" x-text="nr(inputNumber)" class="p-3 bg-gray-100 rounded-lg border border-gray-500"></div>
         </div>
 
 
@@ -57,7 +57,9 @@
 
     </div>
 
-    <div class="p-3 text-justify text-gray-500 bottom-0 left-0 right-0">Ky program është ende në fazën beta, prandaj me gjithë kujdesin gjatë programimit, nuk mund të përjashtojmë mundësinë e ndonjë lëshimi. </div>
+    <div class="p-3 text-justify text-gray-500 bottom-0 left-0 right-0 relative border rounded-lg mx-3 my-3 border-blue-500"> 
+        <div class="border-2 border-blue-500 px-2 rounded-xl text-blue-500 text-sm font-semibold inline-block absolute top-2 left-2">i</div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Ky program është ende në fazën beta, prandaj me gjithë kujdesin gjatë programimit, nuk mund të përjashtojmë mundësinë e ndonjë lëshimi. </div>
 
 
     <!-- Alpine Plugins -->
