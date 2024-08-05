@@ -71,6 +71,7 @@ window.App = () => {
         },
         nr(n){
             if((n+"").length > 0){
+                if(n == 0) return "zero"
                 const r = this.reverse(n)
                 const rchunks = r.match(/\d{1,3}/g).join("|")
                 const chunks = this.reverse(rchunks).split("|")
